@@ -1,0 +1,726 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cotizador | POLYFANS</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png"><style>
+:root{--g:#b8f23a;--bg:#07100c;--p:#101b15;--p2:#15231b;--t:#f4f7f2;--m:#a9b5ad;--l:#ffffff18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0,#b8f23a18,transparent 28rem),var(--bg);color:var(--t);font-family:Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:9;background:#07100ccc;backdrop-filter:blur(15px);border-bottom:1px solid var(--l)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:23px;font-weight:950;letter-spacing:-1px;display:flex;gap:10px;align-items:center}.mark{width:40px;height:40px;border-radius:12px;background:var(--g);color:#07100c;display:grid;place-items:center}
+nav{display:flex;gap:24px;color:var(--m);font-size:14px}.menuToggle{display:none;background:#ffffff08;color:var(--t);border:1px solid var(--l);border-radius:10px;padding:10px 12px;font-size:19px;cursor:pointer}nav a:hover{color:var(--g)}
+.btn{display:inline-flex;padding:13px 18px;border-radius:13px;border:1px solid var(--l);font-weight:800;cursor:pointer;background:transparent;color:var(--t)}.primary{background:var(--g);color:#07100c;border-color:var(--g)}
+.hero{padding:90px 0 65px}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+.eyebrow,.tag{display:inline-block;color:var(--g);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.eyebrow{border:1px solid #b8f23a44;border-radius:999px;padding:7px 11px}
+h1{font-size:clamp(50px,7vw,86px);line-height:.93;letter-spacing:-.065em;margin:20px 0}h1 em{color:var(--g);font-style:normal}.hero p{font-size:18px;color:var(--m);line-height:1.65;max-width:650px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.heroCard{min-height:390px;padding:28px;border:1px solid var(--l);border-radius:30px;background:linear-gradient(145deg,#17251db8,#09110d);box-shadow:0 25px 70px #0007;display:flex;flex-direction:column;justify-content:space-between}
+.mini{color:var(--m);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:900}.big{font-size:58px;font-weight:950;letter-spacing:-.06em;margin:14px 0}.list{margin-top:15px}.list div{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--l);font-size:14px}.list b{color:var(--g)}
+section{padding:70px 0}.head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:27px}.head h2{margin:7px 0;font-size:clamp(34px,4vw,52px);letter-spacing:-.05em}.head p{max-width:520px;color:var(--m);line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:190px;padding:24px;border-radius:21px;background:linear-gradient(145deg,var(--p2),var(--p));border:1px solid var(--l);position:relative}.card:hover{border-color:#b8f23a55}.card h3{margin:28px 0 8px;font-size:22px}.card p{color:var(--m);font-size:14px;line-height:1.55}.arrow{position:absolute;right:20px;bottom:17px;color:var(--g);font-size:21px}
+.priceGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.priceCard{background:var(--p);border:1px solid var(--l);border-radius:20px;overflow:hidden}.top{padding:21px;display:flex;justify-content:space-between;border-bottom:1px solid var(--l)}.top h3{margin:0}.tag{padding:6px 9px;border-radius:99px;background:#b8f23a18}.row{display:grid;grid-template-columns:1fr 120px;padding:14px 21px;border-bottom:1px solid var(--l);gap:10px}.row span{color:var(--m);font-size:14px}.price{text-align:right;font-weight:950}.pending{color:#68756d}.note{padding:15px 21px;color:var(--m);font-size:12px;line-height:1.5}
+.calc{padding:27px;border-radius:27px;background:linear-gradient(145deg,#15231b,#0a120e);border:1px solid #b8f23a33}.calcGrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.form{display:grid;gap:14px}label{font-size:11px;color:var(--m);font-weight:900;letter-spacing:.08em;text-transform:uppercase}input,select{width:100%;margin-top:7px;padding:14px;border:1px solid var(--l);border-radius:11px;background:#09110d;color:var(--t);font:inherit}.result{border:1px solid var(--l);border-radius:20px;padding:25px;display:flex;flex-direction:column;justify-content:center}.result small{color:var(--m);line-height:1.5}.rv{font-size:50px;font-weight:950;color:var(--g);letter-spacing:-.06em;margin:8px 0}
+.cta{padding:42px;border-radius:28px;background:linear-gradient(110deg,var(--g),#dcff8c);color:#07100c;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:42px;letter-spacing:-.05em;margin:5px 0}.cta p{max-width:570px;line-height:1.5}.cta .btn{background:#07100c;color:white;border-color:#07100c}
+footer{border-top:1px solid var(--l);padding:32px 0;color:var(--m);font-size:13px}.foot{display:flex;justify-content:space-between}
+@media(max-width:850px){.menuToggle{display:block}header .nav{position:relative}header nav{display:none;position:absolute;top:70px;left:0;right:0;padding:18px 4%;background:#07100c;border-bottom:1px solid var(--l);flex-direction:column;align-items:flex-start;gap:16px}header nav.open{display:flex}.heroGrid,.calcGrid,.priceGrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.head{display:block}.hero{padding-top:60px}h1{font-size:55px}.cta{display:block}.cta .btn{margin-top:12px}}
+
+.pf-brand-logo{display:block;width:176px;height:auto;max-height:42px;object-fit:contain}
+.pf-footer-brand{display:flex;align-items:center;gap:12px}
+.pf-footer-isologo{width:38px;height:38px;object-fit:contain}
+@media(max-width:560px){.pf-brand-logo{width:145px;max-height:36px}.pf-footer-isologo{width:32px;height:32px}}
+@media(max-width:560px){header .nav>div{gap:5px!important}header .nav>div .btn{padding:10px 9px;font-size:11px}}\n</style>
+<style>
+@media(max-width:800px){
+  #pfPreview{grid-template-columns:1fr!important}
+}
+@media(max-width:520px){
+  #pfPreview{grid-template-columns:1fr!important}
+}
+</style>
+<style>
+/* POLYFANS — mobile first */
+#pfPreview{
+  grid-template-columns:1fr!important;
+}
+#pfPreview > div:first-child{
+  min-height:0!important;
+  padding:12px!important;
+}
+#pfImage{
+  width:100%;
+  max-height:52vh!important;
+  height:auto;
+}
+#pfControls{
+  display:grid;
+  gap:13px;
+}
+#pfAdjustBox{
+  position:relative;
+  width:100%;
+  max-width:560px;
+  margin:auto;
+  touch-action:none;
+  user-select:none;
+}
+#pfAdjustBox img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:58vh;
+  object-fit:contain;
+}
+#pfCrop{
+  position:absolute;
+  border:2px solid #b8f23a;
+  box-shadow:0 0 0 9999px #07100c66;
+  pointer-events:none;
+}
+.pfHandle{
+  position:absolute;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:#b8f23a;
+  border:3px solid #07100c;
+  box-shadow:0 2px 10px #0008;
+  transform:translate(-50%,-50%);
+  touch-action:none;
+  cursor:pointer;
+  z-index:4;
+}
+#pfAdjustHelp{
+  display:none;
+  margin-top:8px;
+  color:#a9b5ad;
+  font-size:12px;
+  line-height:1.4;
+}
+#pfAdjustActions{
+  display:none;
+  gap:8px;
+  flex-wrap:wrap;
+}
+@media(min-width:851px){
+  #pfPreview{
+    grid-template-columns:1.1fr .9fr!important;
+  }
+  #pfControls{
+    display:grid;
+  }
+}
+</style>
+<style>
+/* Ajustes de interacción y diseño responsivo */
+#pfAdjustBox{position:relative;width:100%;max-width:680px;margin:0 auto;touch-action:pan-y;user-select:none}
+#pfAdjustBox img{display:block;width:100%;height:auto;max-height:none;object-fit:fill;pointer-events:none}
+#pfCrop{position:absolute;pointer-events:none;z-index:3}
+.pfHandle{pointer-events:auto;width:36px;height:36px;cursor:grab;touch-action:none}
+.pfHandle:active{cursor:grabbing}
+#pfAdjustBox.pf-is-editing{touch-action:none;cursor:crosshair}
+#pfCart{display:none;margin-top:24px;padding:22px;border:1px solid #b8f23a44;border-radius:22px;background:#0b1510}
+.pf-cart-item{display:grid;grid-template-columns:92px 1fr auto;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid #ffffff18}
+.pf-cart-item img{width:92px;height:82px;object-fit:contain;border-radius:10px;background:#101b15}
+.pf-cart-item-title{font-weight:900;color:#f4f7f2;overflow-wrap:anywhere}
+.pf-cart-item-meta{font-size:12px;color:#a9b5ad;line-height:1.55;margin-top:4px}
+.pf-cart-item-price{font-weight:900;color:#b8f23a;text-align:right;white-space:nowrap}
+.pf-cart-total{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 0;font-weight:900}
+.pf-cart-actions{display:flex;gap:10px;flex-wrap:wrap}
+.pf-help-overlay{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:#000b}
+.pf-help-modal{width:min(560px,100%);max-height:90vh;overflow:auto;background:#101b15;border:1px solid #b8f23a55;border-radius:22px;padding:24px;box-shadow:0 25px 90px #000a}
+.pf-help-modal h2{margin:0 0 8px;font-size:28px}
+.pf-help-step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff15;line-height:1.45;color:#e9eee9}
+.pf-help-num{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#b8f23a;color:#07100c;font-weight:950}
+.pf-help-actions{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.pf-help-actions label{display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;font-size:13px;color:#c6d0c8}
+.pf-help-actions input{width:auto;margin:0;accent-color:#b8f23a}
+@media(max-width:600px){
+ .pf-cart-item{grid-template-columns:72px 1fr;gap:10px}
+ .pf-cart-item img{width:72px;height:72px}
+ .pf-cart-item-price{grid-column:2;text-align:left}
+ .pf-cart-actions .btn{width:100%;justify-content:center}
+ .pf-help-modal{padding:19px}
+}
+</style><style>
+#pfAdjustBox{display:flex!important;align-items:center;justify-content:center;position:relative;width:100%;max-width:680px;margin:0 auto;min-height:220px;touch-action:none;user-select:none}
+#pfAdjustBox img{display:block;width:auto!important;height:auto!important;max-width:100%!important;max-height:65vh!important;object-fit:contain!important;flex:0 1 auto}
+#pfCrop{position:absolute;pointer-events:none}
+#pfCrop .pfHandle{pointer-events:auto;touch-action:none;width:34px;height:34px}
+#pfAdjustBox.pf-is-editing{cursor:crosshair}
+@media(min-width:851px){#pfAdjustBox{min-height:320px}#pfAdjustBox img{max-height:70vh!important}}
+</style></head><body><header><div class="wrap nav">
+<a class="brand" href="index.html"><img src="assets/polyfans-logo.png" alt="POLYFANS" class="pf-brand-logo"></a>
+<nav id="mainNav"><a href="index.html">Inicio</a><a href="corte.html">Corte</a><a href="letras.html">Letras</a><a href="neon.html">Neón Flex</a><a href="cotizador.html" aria-current="page">Cotizador</a></nav><button class="menuToggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button><div style="display:flex;gap:9px;align-items:center"><a class="btn primary" href="cotizador.html">Cotizar</a><a class="btn" href="panel.html" style="border-color:#079b98;color:#9ce8e4">Ingresar ↗</a></div>
+</div></header><section id="cotizador">
+<div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">Herramienta</div><h2>Cotizá tu figura</h2><button class="btn" id="pfHelpOpen" type="button">¿Cómo se usa?</button></div>
+    <p>Subí tu imagen, elegí una medida y la web calcula el formato de cobro automáticamente.</p>
+  </div>
+
+  <div class="calculator" style="padding:25px;border-radius:28px;background:linear-gradient(145deg,#15231b,#0a120e);border:1px solid #b8f23a33">
+    <div class="steps" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px">
+      <span class="tag">1 · Imagen</span><span class="tag" style="color:#77837b;background:#ffffff09">2 · Medida</span><span class="tag" style="color:#77837b;background:#ffffff09">3 · Precio</span>
+    </div>
+
+    <label id="pfUpload" style="min-height:220px;border:1.5px dashed #b8f23a66;border-radius:20px;display:grid;place-items:center;text-align:center;padding:25px;cursor:pointer;background:#b8f23a05">
+      <input id="pfFile" type="file" accept="image/png,image/jpeg,image/webp" style="display:none">
+      <div><div style="font-size:38px;color:#b8f23a">＋</div>
+      <h3 style="margin:0 0 7px;font-size:20px">Subí la imagen de tu figura</h3>
+      <p style="margin:0;color:#a9b5ad;font-size:13px">PNG con fondo transparente recomendado · también JPG y WEBP</p></div>
+    </label>
+
+    <div id="pfPreview" style="display:none;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center">
+      <div style="border:1px solid #ffffff18;border-radius:19px;background:#101510;padding:12px">
+        <div id="pfAdjustBox">
+          <img id="pfImage" alt="Vista previa">
+          <div id="pfCrop">
+            <span class="pfHandle" data-handle="nw"></span>
+            <span class="pfHandle" data-handle="ne"></span>
+            <span class="pfHandle" data-handle="sw"></span>
+            <span class="pfHandle" data-handle="se"></span>
+          </div>
+        </div>
+        <div id="pfAdjustHelp">El contorno se detecta sobre el dibujo, no sobre el fondo. Arrastrá las esquinas si necesitás corregirlo.</div>
+      </div>
+
+      <div id="pfControls" style="display:grid;gap:14px">
+        <div class="tag">Archivo cargado</div>
+        <div id="pfFileName" style="color:#a9b5ad;font-size:13px;word-break:break-word"></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" id="pfChange" type="button">Cambiar imagen</button>
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" id="pfAdjust" type="button">Ajustar contorno</button>
+          <button class="btn" id="pfAdjustDone" type="button" style="display:none">Listo</button>
+        </div>
+
+        <div style="display:grid;gap:8px">
+          <div style="font-size:11px;color:#a9b5ad;font-weight:900;letter-spacing:.08em;text-transform:uppercase">Medida que querés definir</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button class="btn" id="pfSetWidth" type="button">Definir ancho</button>
+            <button class="btn" id="pfSetHeight" type="button">Definir alto</button>
+          </div>
+          <label id="pfDimensionLabel" style="font-size:11px;color:#a9b5ad;font-weight:900;letter-spacing:.08em;text-transform:uppercase">
+            Ancho de la figura (cm)
+            <input id="pfWidth" type="number" min="1" value="50" style="width:100%;margin-top:7px;padding:14px;border:1px solid #ffffff18;border-radius:11px;background:#09110d;color:#f4f7f2;font:inherit">
+          </label>
+        </div>
+        <div style="padding:15px;border:1px solid #ffffff18;border-radius:16px;background:#09110d">
+          <div id="pfDerivedLabel" style="font-size:10px;color:#a9b5ad;font-weight:900;letter-spacing:.1em;text-transform:uppercase">Alto proporcional</div>
+          <div id="pfHeight" style="font-size:30px;font-weight:950;color:#b8f23a;margin-top:4px">—</div>
+          <div id="pfRatio" style="font-size:11px;color:#a9b5ad;margin-top:5px"></div>
+        </div>
+
+        <label style="font-size:11px;color:#a9b5ad;font-weight:900;letter-spacing:.08em;text-transform:uppercase">
+          Cantidad
+          <input id="pfQty" type="number" min="1" value="1" style="width:100%;margin-top:7px;padding:14px;border:1px solid #ffffff18;border-radius:11px;background:#09110d;color:#f4f7f2;font:inherit">
+        </label>
+
+        <label style="font-size:11px;color:#a9b5ad;font-weight:900;letter-spacing:.08em;text-transform:uppercase">
+          Material
+          <select id="pfMaterial" style="width:100%;margin-top:7px;padding:14px;border:1px solid #ffffff18;border-radius:11px;background:#09110d;color:#f4f7f2;font:inherit">
+            <option value="pvc">PVC</option>
+            <option value="polyfan">Polyfan</option>
+          </select>
+        </label>
+
+        <button class="btn primary" id="pfQuote" type="button">Calcular mi precio →</button>
+      </div>
+    </div>
+
+    <div id="pfResult" style="display:none;margin-top:18px;padding:22px;border-radius:18px;background:#050b08;border:1px solid #ffffff18;text-align:center">
+      <div style="font-size:10px;color:#a9b5ad;text-transform:uppercase;letter-spacing:.12em;font-weight:900">Precio estimado</div>
+      <div id="pfPrice" style="font-size:48px;color:#b8f23a;font-weight:950;letter-spacing:-.06em;margin:4px">$ —</div>
+      <p id="pfDetails" style="color:#a9b5ad;font-size:12px"></p>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <button id="pfAddToCart" class="btn primary" type="button">Agregar al pedido +</button>
+      </div>
+      <p id="pfAddedMessage" style="display:none;color:#b8f23a;font-size:13px;text-align:center;margin:12px 0 0">Artículo agregado al pedido.</p>
+    </div>
+
+  </div>
+
+  <div id="pfCart">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div><div class="eyebrow">Tu pedido</div><h3 style="margin:9px 0 0;font-size:25px">Carrito de cotizaciones <span id="pfCartCount" class="tag">0</span></h3></div>
+    </div>
+    <div id="pfCartItems"></div>
+    <div class="pf-cart-total"><span>Total estimado</span><span id="pfCartTotal" style="font-size:28px;color:#b8f23a">$ 0</span></div>
+    <div style="display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:15px">
+      <label>Nombre del cliente (opcional)<input id="pfCustomerName" type="text" placeholder="Tu nombre" style="text-transform:none;letter-spacing:0"></label>
+      <label>Comentario (opcional)<input id="pfCustomerNote" type="text" placeholder="Aclaraciones del pedido" style="text-transform:none;letter-spacing:0"></label>
+    </div>
+    <div class="pf-cart-actions">
+      <button id="pfDownloadCartImage" class="btn" type="button">Descargar imagen del pedido</button>
+      <button id="pfSendCart" class="btn primary" type="button">Compartir pedido por WhatsApp →</button>
+    </div>
+    <p style="color:#a9b5ad;font-size:11px;line-height:1.5;margin:12px 0 0">Se prepara una ficha con las imágenes, medidas, materiales, cantidades y precios. En celulares compatibles podés compartirla directamente desde el menú de compartir.</p>
+  </div>
+</div>
+</section><footer><div class="wrap foot"><span class="pf-footer-brand"><img src="assets/polyfans-isologo.png" alt="Isologo Polyfans" class="pf-footer-isologo"><span>© 2026 Polyfans</span></span><span>Diseñamos impacto para tu negocio.</span></div></footer><script>
+const PF_PRICE_M2 = 52000; // Tarifa interna Polyfans por m²
+let pfRatio=1,pfLoaded=false,pfBounds=null,pfObjectUrl=null,pfCurrentFile=null,pfLastOrder=null,pfDimensionMode='width';
+
+const pfFile=document.getElementById('pfFile');
+const pfUpload=document.getElementById('pfUpload');
+const pfPreview=document.getElementById('pfPreview');
+const pfImage=document.getElementById('pfImage');
+const pfWidth=document.getElementById('pfWidth');
+const pfQty=document.getElementById('pfQty');
+const pfMaterial=document.getElementById('pfMaterial');
+const pfResult=document.getElementById('pfResult');
+const pfAddToCart=document.getElementById('pfAddToCart');
+
+pfFile.addEventListener('change',e=>pfLoad(e.target.files[0]));
+
+document.getElementById('pfChange').addEventListener('click',()=>{
+  pfFile.value='';
+  pfFile.click();
+});
+
+
+function pfLoadBase(f){
+  if(!f || !f.type.startsWith('image/')) return;
+
+  if(pfObjectUrl) URL.revokeObjectURL(pfObjectUrl);
+  pfObjectUrl=URL.createObjectURL(f);
+  pfCurrentFile=f;
+  pfImage.src=pfObjectUrl;
+
+  pfImage.onload=()=>{
+    // Detectamos el rectángulo REAL de la figura, no el tamaño total del PNG.
+    pfBounds=pfDetectBounds(pfImage,f.type);
+    if(!pfBounds){
+      pfBounds={x:0,y:0,w:pfImage.naturalWidth,h:pfImage.naturalHeight};
+    }
+
+    pfRatio=(pfBounds.w/pfBounds.h)||1;
+    // Automático: vertical define alto; horizontal o cuadrada define ancho.
+    pfDimensionMode=pfRatio<1?'height':'width';
+    pfWidth.value=50;
+    pfUpdate();
+    setTimeout(pfRenderCrop,0);
+
+    pfUpload.style.display='none';
+    pfPreview.style.display='grid';
+    document.getElementById('pfFileName').textContent=f.name;
+    pfLoaded=true;
+
+    pfResult.style.display='none';
+    document.getElementById('pfAddedMessage').style.display='none';
+    pfLastOrder=null;
+  };
+}
+
+function pfDetectBounds(img,type){
+  const originalW=img.naturalWidth, originalH=img.naturalHeight;
+  if(!originalW || !originalH) return null;
+
+  // Procesamos a un máximo de 1200 px para mantener un costo razonable.
+  const scale=Math.min(1,1200/Math.max(originalW,originalH));
+  const W=Math.max(1,Math.round(originalW*scale));
+  const H=Math.max(1,Math.round(originalH*scale));
+  const canvas=document.createElement('canvas');
+  canvas.width=W; canvas.height=H;
+  const ctx=canvas.getContext('2d',{willReadFrequently:true});
+  ctx.drawImage(img,0,0,W,H);
+  const data=ctx.getImageData(0,0,W,H).data;
+
+  // Solo usamos alfa cuando el archivo realmente tiene fondo transparente.
+  // Un PNG con fondo blanco/opaco debe pasar por el detector de fondo.
+  let transparentCorners=0, transparentCount=0;
+  if(type==='image/png'||type==='image/webp'){
+    const corners=[0,W-1,(H-1)*W,(H-1)*W+W-1];
+    for(const p of corners) if(data[p*4+3]<=18) transparentCorners++;
+    for(let p=0;p<W*H;p++) if(data[p*4+3]<=18) transparentCount++;
+  }
+
+  if(transparentCorners>=2 && transparentCount>W*H*0.002){
+    let minX=W,minY=H,maxX=-1,maxY=-1;
+    for(let y=0;y<H;y++) for(let x=0;x<W;x++){
+      if(data[(y*W+x)*4+3]>18){
+        if(x<minX)minX=x; if(x>maxX)maxX=x;
+        if(y<minY)minY=y; if(y>maxY)maxY=y;
+      }
+    }
+    if(maxX>=minX && maxY>=minY){
+      return {x:minX/scale,y:minY/scale,w:(maxX-minX+1)/scale,h:(maxY-minY+1)/scale};
+    }
+    return null;
+  }
+
+  // Fondo opaco: estimamos el color del fondo desde los bordes.
+  // Esto evita tomar el lienzo blanco como parte de la figura.
+  const samples=[];
+  const stepX=Math.max(1,Math.floor(W/50));
+  const stepY=Math.max(1,Math.floor(H/50));
+  function sample(x,y){
+    const i=(y*W+x)*4;
+    samples.push([data[i],data[i+1],data[i+2]]);
+  }
+  for(let x=0;x<W;x+=stepX){sample(x,0);sample(x,H-1);}
+  for(let y=0;y<H;y+=stepY){sample(0,y);sample(W-1,y);}
+  const median=a=>{a.sort((x,y)=>x-y);return a[Math.floor(a.length/2)];};
+  const bg=[
+    median(samples.map(v=>v[0])),
+    median(samples.map(v=>v[1])),
+    median(samples.map(v=>v[2]))
+  ];
+
+  const mask=new Uint8Array(W*H);
+  for(let p=0;p<W*H;p++){
+    const i=p*4;
+    const dr=data[i]-bg[0],dg=data[i+1]-bg[1],db=data[i+2]-bg[2];
+    const distance=Math.sqrt(dr*dr+dg*dg+db*db);
+    if(data[i+3]>18 && distance>30) mask[p]=1;
+  }
+
+  // Limpieza de ruido aislado y cierre de pequeños huecos en bordes.
+  const clean=new Uint8Array(W*H);
+  for(let y=1;y<H-1;y++) for(let x=1;x<W-1;x++){
+    const p=y*W+x;
+    if(!mask[p]) continue;
+    let neighbors=0;
+    for(let yy=-1;yy<=1;yy++) for(let xx=-1;xx<=1;xx++){
+      if(xx||yy) neighbors+=mask[(y+yy)*W+x+xx];
+    }
+    if(neighbors>=2) clean[p]=1;
+  }
+
+  // Elegimos el componente conectado más grande (la figura), no el fondo
+  // ni pequeñas marcas sueltas que pueda tener la imagen.
+  const seen=new Uint8Array(W*H);
+  const queue=new Int32Array(W*H);
+  let bestArea=0,bMinX=W,bMinY=H,bMaxX=-1,bMaxY=-1;
+  for(let p0=0;p0<W*H;p0++){
+    if(!clean[p0]||seen[p0]) continue;
+    let head=0,tail=0,area=0;
+    let minX=W,minY=H,maxX=-1,maxY=-1;
+    queue[tail++]=p0; seen[p0]=1;
+    while(head<tail){
+      const p=queue[head++],x=p%W,y=(p/W)|0;
+      area++;
+      if(x<minX)minX=x;if(x>maxX)maxX=x;
+      if(y<minY)minY=y;if(y>maxY)maxY=y;
+      for(let yy=-1;yy<=1;yy++) for(let xx=-1;xx<=1;xx++){
+        if(!xx&&!yy)continue;
+        const nx=x+xx,ny=y+yy;
+        if(nx<0||nx>=W||ny<0||ny>=H)continue;
+        const np=ny*W+nx;
+        if(clean[np]&&!seen[np]){seen[np]=1;queue[tail++]=np;}
+      }
+    }
+    if(area>bestArea){
+      bestArea=area;bMinX=minX;bMinY=minY;bMaxX=maxX;bMaxY=maxY;
+    }
+  }
+  if(bestArea<20||bMaxX<bMinX||bMaxY<bMinY) return null;
+  return {
+    x:bMinX/scale,y:bMinY/scale,
+    w:(bMaxX-bMinX+1)/scale,h:(bMaxY-bMinY+1)/scale
+  };
+}
+
+const pfAdjustBox=document.getElementById('pfAdjustBox');
+const pfCrop=document.getElementById('pfCrop');
+const pfAdjust=document.getElementById('pfAdjust');
+const pfAdjustDone=document.getElementById('pfAdjustDone');
+const pfAdjustHelp=document.getElementById('pfAdjustHelp');
+let pfEditing=false;
+let pfDrag=null;
+
+function pfRenderCrop(){
+  if(!pfBounds || !pfImage.naturalWidth || !pfImage.naturalHeight) return;
+
+  const rect=pfImage.getBoundingClientRect();
+  const box=pfAdjustBox.getBoundingClientRect();
+
+  const left=(pfBounds.x/pfImage.naturalWidth)*rect.width + (rect.left-box.left);
+  const top=(pfBounds.y/pfImage.naturalHeight)*rect.height + (rect.top-box.top);
+  const width=(pfBounds.w/pfImage.naturalWidth)*rect.width;
+  const height=(pfBounds.h/pfImage.naturalHeight)*rect.height;
+
+  pfCrop.style.left=left+'px';
+  pfCrop.style.top=top+'px';
+  pfCrop.style.width=width+'px';
+  pfCrop.style.height=height+'px';
+
+  const handles={
+    nw:[0,0], ne:[100,0], sw:[0,100], se:[100,100]
+  };
+  pfCrop.querySelectorAll('.pfHandle').forEach(h=>{
+    const p=handles[h.dataset.handle];
+    h.style.left=p[0]+'%';
+    h.style.top=p[1]+'%';
+    h.style.display=pfEditing?'block':'none';
+  });
+}
+
+function pfSetEditing(on){
+  pfEditing=on;
+  pfAdjustBox.classList.toggle('pf-is-editing',on);
+  pfAdjust.style.display=on?'none':'inline-flex';
+  pfAdjustDone.style.display=on?'inline-flex':'none';
+  pfAdjustHelp.style.display=on?'block':'none';
+  pfRenderCrop();
+}
+
+pfAdjust.addEventListener('click',()=>pfSetEditing(true));
+pfAdjustDone.addEventListener('click',()=>pfSetEditing(false));
+
+pfAdjustBox.addEventListener('pointerdown',e=>{
+  const handle=e.target.closest('.pfHandle');
+  if(!pfEditing || !handle) return;
+  e.preventDefault();
+  pfAdjustBox.classList.add('pf-is-editing');
+  pfDrag={
+    pointerId:e.pointerId,
+    handle:handle.dataset.handle,
+    startX:e.clientX,
+    startY:e.clientY,
+    startBounds:{...pfBounds}
+  };
+  try{pfAdjustBox.setPointerCapture(e.pointerId);}catch(_){ }
+});
+
+pfAdjustBox.addEventListener('pointermove',e=>{
+  if(!pfDrag || e.pointerId!==pfDrag.pointerId) return;
+  e.preventDefault();
+
+  const b=pfDrag.startBounds;
+  const rect=pfImage.getBoundingClientRect();
+  const sx=rect.width/pfImage.naturalWidth;
+  const sy=rect.height/pfImage.naturalHeight;
+  const dx=(e.clientX-pfDrag.startX)/Math.max(sx,0.000001);
+  const dy=(e.clientY-pfDrag.startY)/Math.max(sy,0.000001);
+
+  let x=b.x,y=b.y,w=b.w,h=b.h;
+  const minSize=8;
+  if(pfDrag.handle.includes('n')){const ny=Math.max(0,Math.min(b.y+b.h-minSize,b.y+dy));y=ny;h=b.y+b.h-ny;}
+  if(pfDrag.handle.includes('s')){const bottom=Math.max(b.y+minSize,Math.min(pfImage.naturalHeight,b.y+b.h+dy));h=bottom-b.y;}
+  if(pfDrag.handle.includes('w')){const nx=Math.max(0,Math.min(b.x+b.w-minSize,b.x+dx));x=nx;w=b.x+b.w-nx;}
+  if(pfDrag.handle.includes('e')){const right=Math.max(b.x+minSize,Math.min(pfImage.naturalWidth,b.x+b.w+dx));w=right-b.x;}
+
+  pfBounds={x,y,w,h};
+  pfRatio=w/h;
+  pfUpdate();
+  pfRenderCrop();
+});
+
+function pfEndDrag(e){
+  if(!pfDrag) return;
+  if(e && e.pointerId!==undefined && e.pointerId!==pfDrag.pointerId) return;
+  pfDrag=null;
+  pfAdjustBox.classList.remove('pf-is-editing');
+}
+pfAdjustBox.addEventListener('pointerup',pfEndDrag);
+pfAdjustBox.addEventListener('pointercancel',pfEndDrag);
+window.addEventListener('blur',()=>pfEndDrag());
+
+window.addEventListener('resize',()=>pfRenderCrop());
+
+const pfOriginalLoad=pfLoadBase;
+function pfLoad(f){
+  pfOriginalLoad(f);
+  setTimeout(()=>{
+    pfRenderCrop();
+    pfSetEditing(false);
+  },80);
+}
+
+
+const pfDimensionLabel=document.getElementById('pfDimensionLabel');
+const pfSetWidth=document.getElementById('pfSetWidth');
+const pfSetHeight=document.getElementById('pfSetHeight');
+
+function pfSetDimensionMode(mode){
+  pfDimensionMode=mode;
+  pfDimensionLabel.firstChild.textContent=mode==='width'?'Ancho de la figura (cm)':'Alto de la figura (cm)';
+  pfSetWidth.classList.toggle('primary',mode==='width');
+  pfSetHeight.classList.toggle('primary',mode==='height');
+  pfUpdate();
+}
+pfSetWidth.addEventListener('click',()=>pfSetDimensionMode('width'));
+pfSetHeight.addEventListener('click',()=>pfSetDimensionMode('height'));
+pfSetDimensionMode('width');
+
+pfWidth.addEventListener('input',()=>{pfUpdate();pfLastOrder=null;pfResult.style.display='none';});
+pfQty.addEventListener('input',()=>{pfLastOrder=null;pfResult.style.display='none';});
+pfMaterial.addEventListener('change',()=>{pfLastOrder=null;pfResult.style.display='none';});
+
+function pfGetDimensions(){
+  const value=Math.max(1,+pfWidth.value||1);
+  return pfDimensionMode==='width'
+    ? {width:value,height:value/pfRatio}
+    : {width:value*pfRatio,height:value};
+}
+
+function pfUpdate(){
+  if(!pfBounds)return;
+  const dims=pfGetDimensions();
+  const derivedLabel=document.getElementById('pfDerivedLabel');
+  derivedLabel.textContent=pfDimensionMode==='width'?'Alto proporcional':'Ancho proporcional';
+  document.getElementById('pfHeight').textContent=
+    (pfDimensionMode==='width'?dims.height:dims.width).toFixed(1)+' cm';
+  document.getElementById('pfRatio').textContent=
+    (pfRatio<1?'Figura vertical':pfRatio>1?'Figura horizontal':'Figura cuadrada')+
+    ' · detectada: '+Math.round(pfBounds.w)+' × '+Math.round(pfBounds.h)+' px · sin márgenes';
+}
+
+document.getElementById('pfQuote').addEventListener('click',pfRecalculate);
+
+function pfRecalculate(){
+  if(!pfLoaded||!pfBounds){alert('Primero subí una imagen.');return;}
+  const dimensions=pfGetDimensions();
+  // Cotizamos con las mismas medidas que mostramos al cliente (1 decimal).
+  // Evita diferencias entre el precio visible y la cuenta manual.
+  const w=Number(dimensions.width.toFixed(1));
+  const h=Number(dimensions.height.toFixed(1));
+  const q=Math.max(1,+pfQty.value||1);
+  const materialName=pfMaterial.value==='pvc'?'PVC':'Polyfan';
+  const area=w*h/10000;
+  const total=Math.round(area*PF_PRICE_M2*q);
+  pfLastOrder={fileName:pfCurrentFile?.name||'Figura',width:w,height:h,quantity:q,material:materialName,area,total,date:new Date()};
+  pfResult.style.display='block';
+  document.getElementById('pfPrice').textContent='$ '+total.toLocaleString('es-AR');
+  document.getElementById('pfDetails').textContent=`${w.toFixed(1)} × ${h.toFixed(1)} cm · ${q} unidad(es) · ${materialName}`;
+  document.getElementById('pfAddedMessage').style.display='none';
+}
+
+// Carrito de múltiples diseños
+const pfCart=[];
+const PF_WHATSAPP_NUMBER='5490000000000'; // Reemplazar por el WhatsApp comercial real de Polyfans.
+
+function pfFormatMoney(n){return '$ '+Math.round(n).toLocaleString('es-AR');}
+function pfCreateImageSnapshot(){
+  // Guardamos un recorte de la figura ajustada, no el lienzo entero con márgenes.
+  const b=pfBounds;
+  const scale=Math.min(1,1400/Math.max(b.w,b.h));
+  const c=document.createElement('canvas');
+  c.width=Math.max(1,Math.round(b.w*scale));
+  c.height=Math.max(1,Math.round(b.h*scale));
+  c.getContext('2d').drawImage(pfImage,b.x,b.y,b.w,b.h,0,0,c.width,c.height);
+  return c.toDataURL('image/png');
+}
+
+pfAddToCart.addEventListener('click',()=>{
+  if(!pfLastOrder){alert('Primero calculá el precio.');return;}
+  const o={...pfLastOrder,id:Date.now()+Math.random(),imageData:pfCreateImageSnapshot()};
+  pfCart.push(o);
+  pfRenderCart();
+  document.getElementById('pfAddedMessage').style.display='block';
+  document.getElementById('pfAddedMessage').textContent='Artículo agregado al pedido. Podés cambiar la imagen y sumar otro diseño.';
+  document.getElementById('pfCart').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+
+function pfRenderCart(){
+  const wrap=document.getElementById('pfCart');
+  const items=document.getElementById('pfCartItems');
+  items.replaceChildren();
+  wrap.style.display=pfCart.length?'block':'none';
+  document.getElementById('pfCartCount').textContent=String(pfCart.length);
+  let total=0;
+  pfCart.forEach((item,index)=>{
+    total+=item.total;
+    const row=document.createElement('div');row.className='pf-cart-item';
+    const img=document.createElement('img');img.src=item.imageData;img.alt='Imagen '+(index+1);
+    const body=document.createElement('div');
+    const title=document.createElement('div');title.className='pf-cart-item-title';title.textContent=item.fileName;
+    const meta=document.createElement('div');meta.className='pf-cart-item-meta';
+    meta.textContent=`${item.width.toFixed(1)} × ${item.height.toFixed(1)} cm · ${item.material} · Cantidad: ${item.quantity}`;
+    body.append(title,meta);
+    const side=document.createElement('div');
+    const price=document.createElement('div');price.className='pf-cart-item-price';price.textContent=pfFormatMoney(item.total);
+    const remove=document.createElement('button');remove.className='btn';remove.type='button';remove.textContent='Quitar';remove.style.marginTop='7px';
+    remove.addEventListener('click',()=>{pfCart.splice(index,1);pfRenderCart();});
+    side.append(price,remove);
+    row.append(img,body,side);items.append(row);
+  });
+  document.getElementById('pfCartTotal').textContent=pfFormatMoney(total);
+}
+
+function pfCartText(){
+  const name=document.getElementById('pfCustomerName').value.trim();
+  const note=document.getElementById('pfCustomerNote').value.trim();
+  const total=pfCart.reduce((s,x)=>s+x.total,0);
+  const lines=pfCart.map((x,i)=>`${i+1}) ${x.fileName}\n   ${x.width.toFixed(1)} × ${x.height.toFixed(1)} cm | ${x.material} | ${x.quantity} unidad(es) | ${pfFormatMoney(x.total)}`);
+  return `PEDIDO / COTIZACIÓN POLYFANS\n${name?'Cliente: '+name+'\n':''}\n${lines.join('\n\n')}\n\nTOTAL ESTIMADO: ${pfFormatMoney(total)}${note?'\nComentario: '+note:''}\n\nAdjunto imagen de referencia del pedido. Solicito confirmación.`;
+}
+
+async function pfBuildOrderPng(){
+  const width=1400,rowH=270,headerH=230,footerH=190;
+  const canvas=document.createElement('canvas');canvas.width=width;canvas.height=headerH+pfCart.length*rowH+footerH;
+  const ctx=canvas.getContext('2d');
+  ctx.fillStyle='#07100c';ctx.fillRect(0,0,width,canvas.height);
+  ctx.fillStyle='#b8f23a';ctx.fillRect(0,0,width,12);
+  ctx.fillStyle='#f4f7f2';ctx.font='900 54px Arial';ctx.fillText('POLYFANS',70,95);
+  ctx.fillStyle='#b8f23a';ctx.font='700 30px Arial';ctx.fillText('DETALLE DEL PEDIDO',70,150);
+  const customer=document.getElementById('pfCustomerName').value.trim();
+  ctx.fillStyle='#a9b5ad';ctx.font='24px Arial';ctx.fillText(`${new Date().toLocaleDateString('es-AR')}${customer?'  ·  Cliente: '+customer:''}`,70,198);
+
+  for(let i=0;i<pfCart.length;i++){
+    const it=pfCart[i],y=headerH+i*rowH;
+    ctx.fillStyle='#101b15';ctx.fillRect(50,y,width-100,rowH-18);
+    ctx.strokeStyle='#ffffff24';ctx.strokeRect(50,y,width-100,rowH-18);
+    const im=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=it.imageData;});
+    const maxW=220,maxH=220,scale=Math.min(maxW/im.width,maxH/im.height),iw=im.width*scale,ih=im.height*scale;
+    ctx.fillStyle='#17251d';ctx.fillRect(70,y+15,maxW,maxH);
+    ctx.drawImage(im,70+(maxW-iw)/2,y+15+(maxH-ih)/2,iw,ih);
+    const tx=330;
+    ctx.fillStyle='#f4f7f2';ctx.font='bold 31px Arial';ctx.fillText(`${i+1}. ${it.fileName}`.slice(0,50),tx,y+60);
+    ctx.fillStyle='#a9b5ad';ctx.font='25px Arial';
+    ctx.fillText(`Medida: ${it.width.toFixed(1)} × ${it.height.toFixed(1)} cm`,tx,y+112);
+    ctx.fillText(`Material: ${it.material}    Cantidad: ${it.quantity}`,tx,y+155);
+    ctx.fillStyle='#b8f23a';ctx.font='bold 34px Arial';ctx.fillText(pfFormatMoney(it.total),tx,y+215);
+  }
+  const total=pfCart.reduce((s,x)=>s+x.total,0);
+  const y=headerH+pfCart.length*rowH+55;
+  ctx.fillStyle='#b8f23a';ctx.font='bold 43px Arial';ctx.fillText(`TOTAL ESTIMADO: ${pfFormatMoney(total)}`,70,y);
+  const note=document.getElementById('pfCustomerNote').value.trim();
+  if(note){ctx.fillStyle='#a9b5ad';ctx.font='22px Arial';ctx.fillText(`Comentario: ${note}`.slice(0,100),70,y+55);}
+  ctx.fillStyle='#a9b5ad';ctx.font='19px Arial';ctx.fillText('Cotización estimativa. Medidas y precio sujetos a confirmación de Polyfans.',70,canvas.height-35);
+  return await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+}
+
+async function pfDownloadOrderImage(){
+  if(!pfCart.length)return;
+  const blob=await pfBuildOrderPng();
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='pedido_polyfans.png';document.body.append(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+  return blob;
+}
+document.getElementById('pfDownloadCartImage').addEventListener('click',pfDownloadOrderImage);
+
+document.getElementById('pfSendCart').addEventListener('click',async()=>{
+  if(!pfCart.length){alert('El carrito está vacío.');return;}
+  const message=pfCartText();
+  const blob=await pfBuildOrderPng();
+  const file=new File([blob],'pedido_polyfans.png',{type:'image/png'});
+  if(navigator.canShare && navigator.canShare({files:[file]}) && navigator.share){
+    try{await navigator.share({title:'Pedido Polyfans',text:message,files:[file]});return;}
+    catch(err){if(err.name==='AbortError')return;}
+  }
+  // Fallback en equipos sin compartir archivos: descarga la ficha y abre WhatsApp con el detalle.
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='pedido_polyfans.png';document.body.append(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+  const wa='https://wa.me/'+PF_WHATSAPP_NUMBER+'?text='+encodeURIComponent(message+'\n\nLa imagen del pedido se descargó; adjuntala a este mensaje antes de enviarlo.');
+  window.open(wa,'_blank','noopener');
+});
+
+// Instructivo emergente: se puede cerrar por esta visita o desactivar en forma permanente.
+const pfHelpOverlay=document.getElementById('pfHelpOverlay');
+function pfOpenHelp(){pfHelpOverlay.style.display='flex';}
+function pfCloseHelp(){
+  if(document.getElementById('pfDontShowHelp').checked){
+    try{localStorage.setItem('polyfans_hide_cotizer_help','1');}catch(_){ }
+  }
+  pfHelpOverlay.style.display='none';
+}
+document.getElementById('pfHelpOpen').addEventListener('click',pfOpenHelp);
+document.getElementById('pfHelpClose').addEventListener('click',pfCloseHelp);
+try{if(localStorage.getItem('polyfans_hide_cotizer_help')!=='1')pfOpenHelp();}catch(_){pfOpenHelp();}
+pfHelpOverlay.addEventListener('click',e=>{if(e.target===pfHelpOverlay)pfCloseHelp();});
+
+</script><script>(()=>{const b=document.getElementById('menuToggle'),n=document.getElementById('mainNav');if(!b||!n)return;b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.textContent=o?'✕':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰'}));})();</script></body></html>

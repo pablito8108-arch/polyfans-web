@@ -1,0 +1,34 @@
+POLYFANS — SITIO WEB COMERCIAL
+================================
+
+Páginas:
+- index.html: landing pública con carrousel, portfolio, servicios, contacto y mapa.
+- corte.html: vinilos y gráfica aplicada.
+- letras.html: letras corpóreas, logos y Polyfan.
+- neon.html: Neón Flex.
+- pvc.html: figuras y displays en PVC.
+- laser.html: corte y grabado láser.
+- merchandising.html: indumentaria y productos personalizados.
+- cotizador.html: cotizador público con carrito.
+- panel.html: acceso al panel interno.
+- assets/: logos, isologo, favicon y fotografías reales.
+
+Datos comerciales:
+- Instagram: @polyfansok
+- WhatsApp: +54 9 11 6678-1429
+- Taller: San Francisco 483, Temperley, Buenos Aires.
+- Cobertura: proyectos y envíos coordinados a todo el país.
+- Horarios publicados en Google: lunes a viernes 10:00–18:00; sábados 09:00–13:00; domingos cerrado.
+- Perfil Google: https://maps.app.goo.gl/wB6eHwx8GWFyWdtQA
+- Calificación informada por Google: 5,0 con 15 reseñas (puede cambiar).
+
+Carrousel:
+- Mantiene una altura estable en escritorio y adapta el marco en móvil.
+- Las imágenes usan object-fit: contain para preservar la proporción y evitar deformaciones.
+- Se utilizaron fotografías propias aportadas en la conversación.
+
+Panel:
+- La contraseña visual sigue siendo una protección client-side y puede inspeccionarse en el código. Para seguridad real, configurar Cloudflare Access antes de publicar.
+
+Para probar localmente, abrir index.html.
+Mantener la carpeta assets junto a los archivos HTML.

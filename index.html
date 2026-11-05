@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>POLYFANS | Cartelería, letras corpóreas y gráfica</title>
+<meta name="description" content="Diseñamos impacto para tu negocio. Cartelería, letras corpóreas, Neón Flex, PVC, vinilos y merchandising en todo el país.">
+<link rel="icon" type="image/png" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/favicon.png">
+<style>
+:root{--teal:#079b98;--red:#f13d43;--yellow:#f4c51c;--ink:#07100c;--panel:#101b15;--lime:#b8f23a;--white:#f5f7f2;--muted:#a9b5ad;--line:#ffffff1c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--white);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#07100ceF;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;gap:28px;justify-content:space-between}.logo{width:190px;max-height:48px;object-fit:contain}nav{display:flex;align-items:center;gap:25px;color:#c5cec7;font-size:14px}nav a:hover{color:var(--lime)}.navActions{display:flex;gap:10px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:13px;border:1px solid var(--line);font-weight:800;font-size:14px;cursor:pointer}.btn-main{background:var(--lime);color:#07100c;border-color:var(--lime)}.btn-ghost{background:#ffffff08}.btn:hover{transform:translateY(-1px)}.login{border-color:#079b98;color:#9ce8e4}
+.hero{padding:74px 0 42px}.heroGrid{display:grid;grid-template-columns:1fr .9fr;gap:44px;align-items:center}.eyebrow{color:var(--lime);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.065em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:620px}.heroBtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.heroVisual{border:1px solid #ffffff20;border-radius:28px;overflow:hidden;background:#111b16;box-shadow:0 28px 90px #0008}.heroVisual img{width:100%;display:block;aspect-ratio:1.55;object-fit:cover}.heroCaption{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}.heroCaption b{font-size:14px}.heroCaption span{font-size:12px;color:var(--muted)}
+section{padding:66px 0}.sectionHead{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}.sectionHead h2{font-size:clamp(32px,4vw,50px);letter-spacing:-.055em;margin:9px 0 0}.sectionHead p{max-width:490px;color:var(--muted);line-height:1.6;margin:0}
+.carousel{position:relative;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#0c1510}.slide{display:none;grid-template-columns:1.1fr .9fr;height:410px;min-height:410px;overflow:hidden}.slide.active{display:grid}.slide img{display:block;width:100%;height:410px;min-height:0;object-fit:contain;object-position:center;background:#050a07}.slideText{padding:38px;display:flex;flex-direction:column;justify-content:center}.slideText small{color:var(--lime);font-weight:900;letter-spacing:.15em}.slideText h3{font-size:clamp(28px,3vw,42px);line-height:1.02;margin:15px 0}.slideText p{color:var(--muted);line-height:1.65}.carouselControls{display:flex;align-items:center;gap:10px;justify-content:flex-end;margin-top:14px}.dots{display:flex;gap:7px;margin-right:auto}.dot{width:9px;height:9px;border:0;border-radius:50%;background:#607068;cursor:pointer}.dot.active{background:var(--lime);width:25px;border-radius:20px}.arrow{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:#111b16;color:white;cursor:pointer;font-size:20px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service{padding:25px;border-radius:20px;background:linear-gradient(145deg,#15251d,#0d1711);border:1px solid var(--line);min-height:205px;display:flex;flex-direction:column}.service .num{font-size:11px;letter-spacing:.15em;color:var(--lime);font-weight:900}.service h3{font-size:22px;margin:25px 0 8px}.service p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 22px}.service a{color:var(--lime);font-weight:800;font-size:13px;margin-top:auto}
+.cta{padding:38px;border-radius:26px;background:linear-gradient(110deg,#087f7d,#0b3933);display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{font-size:clamp(28px,4vw,42px);margin:10px 0}.cta p{color:#d0e3db;line-height:1.5;max-width:620px}
+.contactGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.contactCard,.mapCard{border:1px solid var(--line);border-radius:22px;background:#101b15;overflow:hidden}.contactCard{padding:28px}.contactItem{padding:16px 0;border-bottom:1px solid var(--line)}.contactItem:last-child{border:0}.contactItem small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.13em;margin-bottom:6px}.contactItem b{font-size:17px}.contactItem a{color:var(--lime)}.mapCard iframe{width:100%;height:100%;min-height:360px;border:0;filter:grayscale(.7) invert(.9) contrast(.85)}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.footBrand{display:flex;align-items:center;gap:10px}.footBrand img{width:36px;height:36px;object-fit:contain}
+.menuToggle{display:none;background:#ffffff08;color:var(--white);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:19px;cursor:pointer}.popup{position:fixed;inset:0;z-index:99;background:#000b;display:none;align-items:center;justify-content:center;padding:20px}.popup.show{display:flex}.popupCard{width:min(460px,100%);max-height:90dvh;overflow-y:auto;padding:32px;border:1px solid #ffffff25;border-radius:26px;background:linear-gradient(145deg,#17251d,#07100c);text-align:center;box-shadow:0 30px 100px #000a}.popupCard img{width:72px;height:72px;object-fit:contain;margin-bottom:12px}.popupCard h2{font-size:30px;margin:8px 0}.popupCard p{color:var(--muted);line-height:1.6}.popupActions{display:grid;gap:10px;margin-top:20px}.popupClose{background:none;border:0;color:var(--muted);padding:10px;cursor:pointer}
+@media(max-width:850px){.heroGrid,.contactGrid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.menuToggle{display:block}header .nav{position:relative}header nav{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 4%;background:#07100c;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}header nav.open{display:flex}.slide{grid-template-columns:1fr;height:auto;min-height:0}.slide img{height:clamp(220px,58vw,330px);min-height:0;max-height:none;object-fit:contain}.slideText{padding:25px}.nav{height:72px}.logo{width:150px}}
+@media(max-width:560px){.popup{padding:12px}.popupCard{padding:24px 19px}.popupCard h2{font-size:26px}.services{grid-template-columns:1fr}.hero{padding-top:45px}.hero p{font-size:16px}.sectionHead{display:block}.sectionHead p{margin-top:12px}.cta{display:block;padding:27px}.cta .btn{margin-top:12px;width:100%}.foot{display:block}.foot>span:last-child{display:block;margin-top:12px}.navActions .btn{padding:11px 12px;font-size:12px}.logo{width:130px}.slide img{height:230px;min-height:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="index.html"><img class="logo" src="assets/polyfans-logo.png" alt="POLYFANS"></a>
+<nav id="mainNav"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#contacto">Contacto</a></nav>
+<button class="menuToggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button><div class="navActions"><a class="btn btn-main" href="cotizador.html">Cotizar</a><a class="btn btn-ghost login" href="panel.html">Ingresar ↗</a></div>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap heroGrid">
+<div><div class="eyebrow">Gráfica · Cartelería · Diseño</div><h1>Hacemos que tu marca <em>se haga ver.</em></h1>
+<p>Diseñamos y producimos soluciones gráficas para comercios, eventos y marcas. Cartelería, letras corpóreas, Neón Flex, PVC, vinilos y merchandising.</p>
+<div class="heroBtns"><a class="btn btn-main" href="cotizador.html">Cotizá tu proyecto →</a><a class="btn btn-ghost" href="#trabajos">Ver trabajos</a></div>
+</div>
+<div class="heroVisual"><img src="assets/portfolio-frente-comercial.jpg" alt="Cartelería comercial Polyfans"><div class="heroCaption"><b>Diseñamos impacto para tu negocio</b><span>POLYFANS · Proyectos en todo el país</span></div></div>
+</div></section>
+
+<section id="trabajos"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">Ideas que toman forma</div><h2>Soluciones que se hacen notar.</h2></div><p>Una muestra de nuestras líneas de trabajo. El carrousel queda preparado para incorporar fotografías reales de proyectos Polyfans.</p></div>
+<div class="carousel" aria-label="Galería de servicios">
+<div class="slide active"><img src="assets/portfolio-cartel-local.jpg" alt="Cartelería comercial"><div class="slideText"><small>01 / CARTELERÍA</small><h3>Tu local, imposible de ignorar.</h3><p>Frentes comerciales, marquesinas, señalética y comunicación visual para negocios.</p><a class="btn btn-main" href="corte.html">Conocer servicio →</a></div></div>
+<div class="slide"><img src="assets/portfolio-premios.jpg" alt="Letras corpóreas"><div class="slideText"><small>02 / LETRAS CORPÓREAS</small><h3>Volumen, presencia e identidad.</h3><p>Letras, logos y figuras en Polyfan y PVC para destacar tu marca.</p><a class="btn btn-main" href="letras.html">Conocer servicio →</a></div></div>
+<div class="slide"><img src="assets/portfolio-neon-alas.jpg" alt="Neón Flex"><div class="slideText"><small>03 / NEÓN FLEX</small><h3>Una luz distinta para cada espacio.</h3><p>Nombres, frases y diseños luminosos para locales, eventos y ambientaciones.</p><a class="btn btn-main" href="neon.html">Conocer servicio →</a></div></div>
+<div class="slide"><img src="assets/portfolio-vinilo.jpg" alt="Figuras en PVC"><div class="slideText"><small>04 / PVC Y GRÁFICA</small><h3>Del diseño al producto terminado.</h3><p>Figuras, displays, vinilos y piezas personalizadas para comunicar mejor.</p><a class="btn btn-main" href="cotizador.html">Cotizar una figura →</a></div></div>
+</div>
+<div class="carouselControls"><div class="dots" id="slideDots"><button class="dot active" aria-label="Imagen 1"></button><button class="dot" aria-label="Imagen 2"></button><button class="dot" aria-label="Imagen 3"></button><button class="dot" aria-label="Imagen 4"></button></div><button class="arrow" id="prevSlide" aria-label="Anterior">‹</button><button class="arrow" id="nextSlide" aria-label="Siguiente">›</button></div>
+</div></section>
+
+<section id="servicios"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">Qué hacemos</div><h2>Un solo lugar. Muchas soluciones.</h2></div><p>Trabajamos cada proyecto a medida y coordinamos entregas e instalaciones en distintos puntos del país.</p></div>
+<div class="services">
+<article class="service"><div class="num">01 / CORTE</div><h3>Vinilos y corte</h3><p>Vinilos de corte, impresos, señalética y gráfica aplicada.</p><a href="corte.html">Ver servicio →</a></article>
+<article class="service"><div class="num">02 / CORPÓREOS</div><h3>Letras y logos</h3><p>Letras corpóreas, logos, figuras y soluciones en Polyfan.</p><a href="letras.html">Ver servicio →</a></article>
+<article class="service"><div class="num">03 / LUZ</div><h3>Neón Flex</h3><p>Nombres, frases y diseños luminosos personalizados.</p><a href="neon.html">Ver servicio →</a></article>
+<article class="service"><div class="num">04 / PVC</div><h3>Figuras y displays</h3><p>Figuras personalizadas en PVC espumado y vinilo impreso.</p><a href="pvc.html">Ver servicio →</a></article>
+<article class="service"><div class="num">05 / PRODUCCIÓN</div><h3>Corte y grabado láser</h3><p>Piezas a medida en MDF, acrílico y otros materiales compatibles.</p><a href="laser.html">Ver servicio →</a></article>
+<article class="service"><div class="num">06 / MARCAS</div><h3>Merchandising</h3><p>Indumentaria y productos personalizados para empresas y eventos.</p><a href="merchandising.html">Ver servicio →</a></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="cta"><div><div class="eyebrow">Tu idea empieza acá</div><h2>¿Tenés un proyecto en mente?</h2><p>Contanos qué necesitás. Te ayudamos a encontrar el material, formato y terminación adecuados.</p></div><a class="btn btn-main" href="cotizador.html">Empezar a cotizar →</a></div></div></section>
+
+<section id="contacto"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">Hablemos</div><h2>Contacto y ubicación.</h2></div><p>Realizamos proyectos para clientes de todo el país. Coordinamos producción, envío e instalación según cada trabajo.</p></div>
+<div class="contactGrid"><div class="contactCard">
+<div class="contactItem"><small>Instagram</small><b><a href="https://www.instagram.com/polyfansok/" target="_blank" rel="noopener">@polyfansok ↗</a></b></div>
+<div class="contactItem"><small>Taller / punto de referencia</small><b><a href="https://maps.app.goo.gl/wB6eHwx8GWFyWdtQA" target="_blank" rel="noopener">San Francisco 483 · Temperley · Buenos Aires ↗</a></b></div>
+<div class="contactItem"><small>WhatsApp</small><b><a href="https://wa.me/5491166781429" target="_blank" rel="noopener">+54 9 11 6678-1429 ↗</a></b></div>
+<div class="contactItem"><small>Horarios del taller</small><b>Lunes a viernes · 10:00 a 18:00<br>Sábados · 09:00 a 13:00<br>Domingos · Cerrado</b></div>
+<div class="contactItem"><small>Google</small><b>5,0 ★ · 15 reseñas</b></div>
+</div><div class="mapCard"><iframe title="Ubicación de Polyfans" loading="lazy" src="https://www.google.com/maps?q=-34.7842023,-58.4173503&z=17&output=embed"></iframe></div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span class="footBrand"><img src="assets/polyfans-isologo.png" alt="Isologo Polyfans">© 2026 Polyfans</span><span>Diseñamos impacto para tu negocio.</span></div></footer>
+
+<div class="popup" id="instagramPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle"><div class="popupCard">
+<img src="assets/polyfans-isologo.png" alt=""><div class="eyebrow">Seguinos en Instagram</div><h2 id="popupTitle">La gráfica también se vive.</h2><p>Conocé nuestros trabajos, novedades y proyectos en <strong>@polyfansok</strong>.</p>
+<div class="popupActions"><a class="btn btn-main" href="https://www.instagram.com/polyfansok/" target="_blank" rel="noopener">Seguir a @polyfansok ↗</a><button class="popupClose" id="closePopup">Ahora no</button></div>
+</div></div>
+<script>
+(()=>{const slides=[...document.querySelectorAll('.slide')],dots=[...document.querySelectorAll('.dot')];let active=0,timer;
+function show(i){active=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===active));dots.forEach((d,n)=>d.classList.toggle('active',n===active));}
+document.getElementById('prevSlide').addEventListener('click',()=>{show(active-1);restart()});
+document.getElementById('nextSlide').addEventListener('click',()=>{show(active+1);restart()});
+dots.forEach((d,n)=>d.addEventListener('click',()=>{show(n);restart()}));
+function restart(){clearInterval(timer);timer=setInterval(()=>show(active+1),6000)}restart();
+const menu=document.getElementById('menuToggle'),nav=document.getElementById('mainNav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+const pop=document.getElementById('instagramPopup'),close=()=>pop.classList.remove('show');
+try{if(localStorage.getItem('pf_ig_popup_seen_v3')!=='1')setTimeout(()=>{pop.classList.add('show');localStorage.setItem('pf_ig_popup_seen_v3','1')},450)}catch(e){setTimeout(()=>pop.classList.add('show'),450)}
+document.getElementById('closePopup').addEventListener('click',close);pop.addEventListener('click',e=>{if(e.target===pop)close()});
+})();
+</script>
+</body></html>
